@@ -64,7 +64,7 @@ jobs:
           registry: ghcr.io
           image_name: ${{ matrix.name }}-${{ matrix.port }}-${{ matrix.branch }}-base
           image_tag: latest
-          build_extra_args: "--compress=true --target toolkit --build-arg=REPO=${{ matrix.repo }} --build-arg=BRANCH=${{ matrix.branch }} --build-arg=IDF=${{ matrix.idf }}"
+          build_extra_args: "--compress=true --target toolkit --build-arg=REPO=${{ matrix.repo }} --build-arg=BRANCH=${{ matrix.branch }} --build-arg=IDF=${{ matrix.idf }} --build-arg=BROAD=GENERIC_SPIRAM"
           context: .
           dockerfile: esp32/Dockerfile
           push_image_and_stages: "on:push"
@@ -112,7 +112,7 @@ jobs:
           registry: ghcr.io
           image_name: ${{ matrix.name }}-${{ matrix.port }}-${{ matrix.branch }}-base
           image_tag: latest
-          build_extra_args: "--compress=true --target toolkit --build-arg=REPO=${{ matrix.repo }} --build-arg=BRANCH=${{ matrix.branch }} --build-arg=IDF=${{ matrix.idf }}"
+          build_extra_args: "--compress=true --target toolkit --build-arg=REPO=${{ matrix.repo }} --build-arg=BRANCH=${{ matrix.branch }} --build-arg=IDF=${{ matrix.idf }} --build-arg=BROAD=GENERIC_SPIRAM"
           context: .
           dockerfile: esp32/Dockerfile
           push_image_and_stages: "on:push"
